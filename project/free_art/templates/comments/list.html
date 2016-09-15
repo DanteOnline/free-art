@@ -1,0 +1,11 @@
+{% for object in comment_list %}
+    <div class="row">
+        <div class="col-md-12">
+            {{ object.user_name }}
+            <span class="pull-right">{{ object.submit_date|date:"j.m.Y H:i:s" }}</span>
+            <p>{{ object.comment }}</p>
+        </div>
+    </div>
+
+    <hr>
+{% endfor %}

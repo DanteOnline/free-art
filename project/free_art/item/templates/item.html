@@ -1,0 +1,95 @@
+{% extends "main.html" %}
+{% load comments %}
+{% load i18n %}
+{% block breadcrumbs %}
+    <ol class="breadcrumb">
+        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
+        {% if object.category.has_parent %}
+            <li><a href="{{object.category.parent.get_url}}">{{object.category.parent.name}}</a> </li>
+        {% endif %}
+        <li><a href="{{object.category.get_url}}">{{object.category.name}}</a> </li>
+        <li class="active">{{object.name}}</li>
+    </ol>
+{% endblock %}
+{% block main %}
+<div class="thumbnail">
+    <div>
+        <div class="left_img">
+            <div class="img_desc">{% trans "before" %}</div>
+            <img class="img-responsive" src="{{object.start.url}}" alt="object.name">
+        </div>
+        <div class="right_img">
+            <div class="img_desc">{% trans "after" %}</div>
+            <img class="img-responsive" src="{{object.end.url}}" alt="object.name">
+        </div>
+    </div>
+
+    <div class="caption-full">
+        <h4 class="pull-right"><a href="{{object.load_file.url}}">{% trans "DOWNLOAD FREE" %}</a></h4>
+        <h1>{{object.name}}
+        </h1>
+        <p>{{object.get_full_desc}}</p>
+    </div>
+    <div class="ratings">
+        <p class="pull-right">{{object.comment_count}} {% trans "reviews" %}</p>
+        <p>
+            <a href="{{object.shutter_url}}">{% trans "see example in shuttrstock-portfolio " %}</a>
+        </p>
+    </div>
+</div>
+<div class="well">
+    <div class="text-right">
+        <a class="btn btn-success" data-toggle="modal" data-target="#myModal">{% trans "Leave a Review" %}</a>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">{% trans "Leave a Review" %}</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+                {% get_comment_form for object as form %}
+                <div class="form">
+                    <form action="{% comment_form_target %}" method="post" id="comment_form">
+                        {% include "generic/form.html" %}
+                        <input type="hidden" name="next" value="{{object.get_url}}">
+                        <div id="result" style="margin-bottom: 20px"></div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">{% trans "Leave a Review" %}</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Cancel" %}</button>
+                         </div>
+                    </form>
+                </div>
+            </p>
+          </div>
+          </div>
+      </div>
+    </div>
+
+    <hr>
+
+    {% if object.comment_count == 0 %}
+        <div class="row">
+            <div class="col-md-12">
+                <p>{% trans "No reviews. You will be first" %}</p>
+            </div>
+        </div>
+    {% else %}
+        {% render_comment_list for object %}
+    {% endif %}
+
+</div>
+{% endblock %}
+
+
+{% block add_js %}
+    {% load staticfiles %}
+    <script src="{% static "site/js/jquery.form.js" %}"></script>
+    <script src="{% static "site/js/jquery.validate.js" %}"></script>
+{% endblock %}

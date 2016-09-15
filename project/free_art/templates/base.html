@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter39090550 = new Ya.Metrika({
+                    id:39090550,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/39090550" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <meta name="google-site-verification" content="0indjjTSHASuuEICeSKws-nCKQPSZh84uZgbi6v7U04" />
+    <meta name="yandex-verification" content="5c2064563e66e93c" />
+    {% load i18n %}
+    {% load staticfiles %}
+    <link rel="alternate" href="http://danteonline.pythonanywhere.com/en/" hreflang="en" />
+    <link rel="alternate" href="http://danteonline.pythonanywhere.com/ru/" hreflang="ru" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description%}{% endblock %}">
+    <meta name="author" content="Dante">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "site/css/bootstrap.css" %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static "site/css/shop-homepage.css" %}" rel="stylesheet">
+    <link href="{% static "site/css/free-art.css" %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+{% block content %}
+{% endblock %}
+<!-- jQuery -->
+    <script src="{% static "site/js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "site/js/bootstrap.js" %}"></script>
+    <script type="text/javascript">
+        $('document').ready(function(){
+		$('#comment_form').validate(
+		{
+			//Правила
+			rules:{
+				"name":{ required:true, maxlength:40 },
+				"email":{ required:true, email: true },
+				"comment":{ required:true },
+			},
+			//Текста предупреждений
+			messages:{
+				"name":{ required:"<br/><span style='color:red;'>{% trans "Enter your name" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
+				"email":{ required:"<br/><span style='color:red;'>{% trans "Enter your email" %}</a>",
+				email: "<br/><span style='color:red;'>{% trans "Wrong email number" %}</a>"},
+				"comment":{required:"<br/><span style='color:red;'>{% trans "Enter your comment" %}</a>"}
+			},
+		})
+	});
+    </script>
+    {% block add_js %}{% endblock %}
+</body>
+</html>

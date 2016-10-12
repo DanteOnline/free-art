@@ -18,16 +18,31 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">{% trans "Contacts" %}</a>
+                        <a href="{% url "category" pk=1 %}">{% trans "Scripts" %}</a>
                     </li>
                     <li>
-                        <a href="#">{% trans "How install" %}</a>
+                        <a href="{% url "contact" %}">{% trans "Contacts" %}</a>
                     </li>
                     <li>
-                        <a href="#">{% trans "About" %}</a>
+                        <a href="{% url "how2use" %}">{% trans "Install and use" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url "about" %}">{% trans "About" %}</a>
                     </li>
                     <li>
                         <a href="{% url "faq" %}">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="{% url "team" %}">{% trans "Our team" %}</a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>{% trans "Language" %}</b><span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        {% get_available_languages as languages %}
+                        {% for lang_code, lang_name in languages %}
+                            <li><a href="/{{lang_code}}">{{lang_name}}</a></li>
+                        {% endfor %}
+                      </ul>
                     </li>
                 </ul>
             </div>
@@ -37,43 +52,9 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <!--<p class="lead">{% trans "Shop name" %}</p>-->
-                <div class="list-group">
-                    {% for top in top_list %}
-                        <!--Выпадающий список
-                        <div class="dropdown">
-                          <a href="{{top.get_url}}" data-toggle="dropdown" class="list-group-item dropdown-toggle">
-                            {{top.name}}
-                            <b class="caret_right"></b>
-                          </a>
-                          <ul class="dropdown-menu open_left">
-                              {% for c in top.get_children %}
-                                  <li><a href="{{c.get_url}}">{{c.name}}</a></li>
-                              {% endfor %}
-                          </ul>
-                        </div>-->
-                      <a href="{{top.get_url}}" class="list-group-item">
-                        {{top.name}}
-                      </a>
-                      <ul>
-                          {% for c in top.get_children %}
-                              <li ><a class="list-group-item list-group-item-sub" href="{{c.get_url}}">{{c.name}}</a></li>
-                          {% endfor %}
-                      </ul>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div class="row">
-                    {% block breadcrumbs %}
-                    <ol class="breadcrumb">
-                        <li class="active">{% trans "mainpage" %}</li>
-                    </ol>
-                    {% endblock %}
-                    {% block main %}
-                    {% endblock %}
-                </div>
+            <div class="row">
+                {% block main %}
+                {% endblock %}
             </div>
         </div>
     </div>

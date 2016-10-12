@@ -1,31 +1,28 @@
-{% extends "main.html" %}
+{% extends "scripts.html" %}
 {% load comments %}
 {% load i18n %}
-{% block breadcrumbs %}
-    <ol class="breadcrumb">
-        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
-        {% if object.category.has_parent %}
-            <li><a href="{{object.category.parent.get_url}}">{{object.category.parent.name}}</a> </li>
-        {% endif %}
-        <li><a href="{{object.category.get_url}}">{{object.category.name}}</a> </li>
-        <li class="active">{{object.name}}</li>
-    </ol>
-{% endblock %}
-{% block main %}
+{% block scripts %}
+<ol class="breadcrumb">
+    <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
+    {% if object.category.has_parent %}
+        <li><a href="{{object.category.parent.get_url}}">{{object.category.parent.name}}</a> </li>
+    {% endif %}
+    <li><a href="{{object.category.get_url}}">{{object.category.name}}</a> </li>
+    <li class="active">{{object.name}}</li>
+</ol>
 <div class="thumbnail">
-    <div>
+    <div class="he-picts450">
         <div class="left_img">
-            <div class="img_desc">{% trans "before" %}</div>
+            <div class="img_desc">{% trans "Before" %}</div>
             <img class="img-responsive" src="{{object.start.url}}" alt="object.name">
         </div>
         <div class="right_img">
-            <div class="img_desc">{% trans "after" %}</div>
+            <div class="img_desc">{% trans "After" %}</div>
             <img class="img-responsive" src="{{object.end.url}}" alt="object.name">
         </div>
     </div>
-
     <div class="caption-full">
-        <h4 class="pull-right"><a href="{{object.load_file.url}}">{% trans "DOWNLOAD FREE" %}</a></h4>
+        <h4 class="pull-right"><a class="btn btn-primary" href="{{object.load_file.url}}">{% trans "DOWNLOAD FREE" %}</a></h4>
         <h1>{{object.name}}
         </h1>
         <p>{{object.get_full_desc}}</p>
@@ -61,7 +58,7 @@
                         <input type="hidden" name="next" value="{{object.get_url}}">
                         <div id="result" style="margin-bottom: 20px"></div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">{% trans "Leave a Review" %}</button>
+                            <button type="submit" class="btn btn-primary">{% trans "Leave a Review" %}</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Cancel" %}</button>
                          </div>
                     </form>
@@ -92,4 +89,25 @@
     {% load staticfiles %}
     <script src="{% static "site/js/jquery.form.js" %}"></script>
     <script src="{% static "site/js/jquery.validate.js" %}"></script>
+    <script type="text/javascript">
+        $('document').ready(function(){
+		$('#comment_form').validate(
+		{
+			//Правила
+			rules:{
+				"name":{ required:true, maxlength:40 },
+				"email":{ required:true, email: true },
+				"comment":{ required:true },
+			},
+			//Текста предупреждений
+			messages:{
+				"name":{ required:"<br/><span style='color:red;'>{% trans "Enter your name" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
+				"email":{ required:"<br/><span style='color:red;'>{% trans "Enter your email" %}</a>",
+				email: "<br/><span style='color:red;'>{% trans "Wrong email number" %}</a>"},
+				"comment":{required:"<br/><span style='color:red;'>{% trans "Enter your comment" %}</a>"}
+			},
+		})
+	});
+    </script>
 {% endblock %}

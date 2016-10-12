@@ -37,7 +37,7 @@ body {
 .ratings {
     padding-right: 10px;
     padding-left: 10px;
-    color: #d17581;
+    color: #0497C1;
 }
 
 .thumbnail {
@@ -50,5 +50,6 @@ body {
 }
 
 footer {
+    /*background-color: #FFF6A6;*/
     margin: 50px 0;
 }

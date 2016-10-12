@@ -19,7 +19,8 @@
 }
 
 .list-group-item-sub {
-    padding-left: 20px;
+    padding-left: 40px;
+    background-color: #fff;
 }
 
 .left_img {
@@ -39,4 +40,18 @@
 
 .he-picts {
     height: 350px;
+}
+
+.he-picts450 {
+    height: 450px;
+}
+
+.left_menu {
+    list-style-type: none;
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0;
+}
+
+.img_desc {
+    text-align: center;
 }

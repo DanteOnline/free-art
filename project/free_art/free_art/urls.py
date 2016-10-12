@@ -25,4 +25,8 @@ urlpatterns = i18n_patterns(
     url(r'^', include('main.urls')),
     url(r'^faq/', include('faq.urls')),
     url(r'comments/', include('django_comments.urls')),
+    url(r'team/', include('team.urls')),
+    url(r'about/', include('about.urls')),
+    url(r'contact', include('contact.urls')),
+    url(r'h2use', include('how_to_use.urls'))
 ) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

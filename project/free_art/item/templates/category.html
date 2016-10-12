@@ -1,6 +1,6 @@
-{% extends "main.html" %}
+{% extends "scripts.html" %}
 {% load i18n %}
-{% block breadcrumbs %}
+{% block scripts %}
     <ol class="breadcrumb">
         <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
         {% if object.has_parent %}
@@ -8,8 +8,6 @@
         {% endif %}
         <li class="active">{{object.name}}</li>
     </ol>
-{% endblock %}
-{% block main %}
         <h1>{{object.name}}</h1>
         {% for item in object.get_items %}
             <div class="col-sm-4 col-lg-4 col-md-4">
@@ -18,11 +16,11 @@
                     <a href="" data-toggle="modal" data-target="#myModal">
                         <div>
                             <div class="left_img">
-                                <div class="img_desc">{% trans "before" %}</div>
+                                <div class="img_desc">{% trans "Before" %}</div>
                                 <img src="{{item.start.url}}" alt="item.name">
                             </div>
                             <div class="right_img">
-                                <div class="img_desc">{% trans "after" %}</div>
+                                <div class="img_desc">{% trans "After" %}</div>
                                 <img src="{{item.end.url}}" alt="item.name">
                             </div>
                         </div>
@@ -41,11 +39,11 @@
                                 <p>
                                     <div>
                                         <div class="left_img">
-                                            <div class="img_desc">{% trans "before" %}</div>
+                                            <div class="img_desc">{% trans "Before" %}</div>
                                             <img src="{{item.start.url}}" alt="item.name">
                                         </div>
                                         <div class="right_img">
-                                            <div class="img_desc">{% trans "after" %}</div>
+                                            <div class="img_desc">{% trans "After" %}</div>
                                             <img src="{{item.end.url}}" alt="item.name">
                                         </div>
                                     </div>
@@ -62,7 +60,7 @@
 
                     <div class="caption">
                         <div><a href="{{item.shutter_url}}">{% trans "see example in shuttrstock-portfolio " %}</a> </div>
-                        <h4 class="pull-right"><a href="{{item.get_url}}">{% trans "Read more" %}</a></h4>
+                        <h5 class="pull-right"><a href="{{item.get_url}}">{% trans "Read more..." %}</a></h5>
                         <h4><a href="{{item.get_url}}">{{item.name}}</a>
                         </h4>
                         <p>{{item.short_desc}}</p>
@@ -70,7 +68,7 @@
                     <div class="ratings">
                         <p class="pull-right">{{item.comment_count}} {% trans "reviews" %}</p>
                         <p>
-                            <a href="{{item.load_file.url}}">{% trans "download free" %}</a>
+                            <a class="btn btn-primary" href="{{item.load_file.url}}">{% trans "download free" %}</a>
                         </p>
                     </div>
                 </div>

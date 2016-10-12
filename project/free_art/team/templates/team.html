@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+    <ol class="breadcrumb">
+        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
+        <li class="active">{% trans "Our team" %}</li>
+    </ol>
+    {% for d in developers %}
+        <div class="col-md-4">
+            <img src="{{d.photo.url}}" class="img-responsive img-circle" alt="{{d.name}}">
+            <h4>{{d.name}}</h4>
+            <p class="text-muted">{{d.role}}</p>
+        </div>
+    {% endfor %}
+    {% for d in testers %}
+        <div class="col-md-4">
+            <img src="{{d.photo.url}}" class="img-responsive img-circle" alt="{{d.name}}">
+            <h4>{{d.name}}</h4>
+            <p><a href="{{d.ref_ur}}" class="btn btn-primary">{% trans "Bacame referal" %}</a>
+            <a href="{{d.portfolio_url}}" class="btn btn-info">{% trans "Portfolio" %}</a></p>
+        </div>
+    {% endfor %}
+{% endblock %}

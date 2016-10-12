@@ -11,6 +11,7 @@ class Developer(models.Model):
     vk_url = models.URLField(null=True, blank=True)
     twitter_url = models.URLField(null=True, blank=True)
 
+
     def __str__(self):
         result = self.name
         if self.role:

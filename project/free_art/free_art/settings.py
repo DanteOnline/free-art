@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     'item',
     'main',
     'faq',
-    'team'
+    'team',
+    'about',
+    'contact',
+    'how_to_use'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -151,5 +154,5 @@ MANAGERS = (('dante', 'iamdanteonline@gmail.com'),)
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'iamdanteonline@gmail.com'
-
+EMAIL_HOST_PASSWORD = 'PASSWORD'
 DEFAULT_FROM_EMAIL = 'iamdanteonline@gmail.com'

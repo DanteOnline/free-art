@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block main %}
+    <ol class="breadcrumb">
+        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a></li>
+        <li class="active">{% trans "contacts" %}</li>
+    </ol>
+    <h1>{% trans "Contact as" %}</h1>
+    <form action="" id="contact_form" method="post">
+        {{form.as_ul}}
+        {% csrf_token %}
+        <hr>
+        <input type="submit" class="btn btn-primary" value="{% trans "Send message" %}">
+    </form>
+    <div id="result"></div>
+{% endblock %}
+{% block add_js %}
+    <script type="text/javascript" src="{% static "site/js/jquery.form.js" %}"></script>
+    <script type="text/javascript" src="{% static "site/js/jquery.validate.js" %}"></script>
+
+    <script type="text/javascript">
+        $('document').ready(function(){
+		$('#contact_form').validate(
+		{
+			//Правила
+			rules:{
+			    "subject":{ required:true, maxlength:40 },
+				"name":{ required:true, maxlength:40 },
+				"email":{ required:true, email: true },
+				"message":{ required:true },
+			},
+			//Текста предупреждений
+			messages:{
+			    "subject":{ required:"<br/><span style='color:red;'>{% trans "Enter Subject" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
+				"name":{ required:"<br/><span style='color:red;'>{% trans "Enter your name" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
+				"email":{ required:"<br/><span style='color:red;'>{% trans "Enter your email" %}</a>",
+				email: "<br/><span style='color:red;'>{% trans "Wrong email number" %}</a>"},
+				"message":{required:"<br/><span style='color:red;'>{% trans "Enter message" %}</a>"}
+			},
+			//Обработчик и отправка данных
+			submitHandler: function(form){
+				$(form).ajaxSubmit({
+					target: '#result',
+					success: function() {
+						$('#FormBox').slideUp('fast');
+					}
+				});
+			}
+		})
+	});
+    </script>
+
+{% endblock%}

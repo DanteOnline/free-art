@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% load i18n %}
+{% block main %}
+    <ol class="breadcrumb">
+        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a></li>
+        <li class="active">{% trans "about" %}</li>
+    </ol>
+    <h1>{% trans "About" %}</h1>
+    {% trans "about text" %}
+{% endblock %}

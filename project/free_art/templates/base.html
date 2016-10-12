@@ -51,6 +51,8 @@
     <link href="{% static "site/css/shop-homepage.css" %}" rel="stylesheet">
     <link href="{% static "site/css/free-art.css" %}" rel="stylesheet">
 
+    {% block add_css%}{% endblock %}
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -66,27 +68,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static "site/js/bootstrap.js" %}"></script>
-    <script type="text/javascript">
-        $('document').ready(function(){
-		$('#comment_form').validate(
-		{
-			//Правила
-			rules:{
-				"name":{ required:true, maxlength:40 },
-				"email":{ required:true, email: true },
-				"comment":{ required:true },
-			},
-			//Текста предупреждений
-			messages:{
-				"name":{ required:"<br/><span style='color:red;'>{% trans "Enter your name" %}</a>",
-                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
-				"email":{ required:"<br/><span style='color:red;'>{% trans "Enter your email" %}</a>",
-				email: "<br/><span style='color:red;'>{% trans "Wrong email number" %}</a>"},
-				"comment":{required:"<br/><span style='color:red;'>{% trans "Enter your comment" %}</a>"}
-			},
-		})
-	});
-    </script>
     {% block add_js %}{% endblock %}
 </body>
 </html>

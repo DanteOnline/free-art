@@ -1,6 +1,16 @@
 {% extends "scripts.html" %}
 {% load comments %}
 {% load i18n %}
+{% block title %}
+    {% if object.category.has_parent %}
+            {{object.category.parent.name}}:
+    {% endif %}
+        {{object.category.name}}:
+        {{object.name}}
+{% endblock %}
+{% block description %}
+    {{object.short_desc}}
+{% endblock %}
 {% block scripts %}
 <ol class="breadcrumb">
     <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
@@ -34,6 +44,52 @@
         </p>
     </div>
 </div>
+<div class="panel-group" id="accordion">
+{% if object.has_params %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#params">{% trans "item_params" %}</a>
+                </h4>
+            </div>
+            <div id="params" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <table class="table">
+                        <tr>
+                            <th>{% trans "item_param_name" %}</th>
+                            <th>{% trans "item_param_description" %}</th>
+                            <th>{% trans "item_param_default_value" %}</th>
+                        </tr>
+                        {% for param in object.get_params %}
+                            <tr>
+                                <td>{{param.name}}</td>
+                                <td>{{param.desc}}</td>
+                                <td>{{param.default_value}}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if object.video_url %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#htu">{% trans "item_how_to_use" %}</a>
+                </h4>
+            </div>
+            <div id="htu" class="panel-collapse collapse">
+                <div class="panel-body">
+                    {{object.video_html|safe}}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
 <div class="well">
     <div class="text-right">
         <a class="btn btn-success" data-toggle="modal" data-target="#myModal">{% trans "Leave a Review" %}</a>

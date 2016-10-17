@@ -81,6 +81,7 @@ class Script(models.Model):
     category = models.ForeignKey(Category)
     shutter_url = models.URLField(null=True, blank=True)
     video_url = models.URLField(null=True, blank=True)
+    video_html = models.TextField(null=True, blank=True)
 
     def get_url(self):
         return reverse('script', kwargs={'pk': self.pk})
@@ -97,6 +98,13 @@ class Script(models.Model):
     def comment_count(self):
         comments = Comment.objects.filter(object_pk=self.pk)
         return len(comments)
+
+    def get_params(self):
+        return ScriptParam.objects.filter(script=self)
+
+    def has_params(self):
+        params = self.get_params()
+        return len(params) > 0
 
 class ScriptParam(models.Model):
     name = models.CharField(max_length=50, unique=True)

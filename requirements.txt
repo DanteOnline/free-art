@@ -3,3 +3,4 @@ django-modeltranslation
 django-cleanup
 django-contrib-comments
 Pillow
+pytz

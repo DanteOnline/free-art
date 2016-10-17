@@ -1,5 +1,14 @@
 {% extends "scripts.html" %}
 {% load i18n %}
+{% block title %}
+{% if object.has_parent %}
+        {{object.parent.name}}:
+    {% endif %}
+    {{object.name}}
+{% endblock %}
+{% block description %}
+    {{object.short_desc}}
+{% endblock %}
 {% block scripts %}
     <ol class="breadcrumb">
         <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
@@ -9,6 +18,9 @@
         <li class="active">{{object.name}}</li>
     </ol>
         <h1>{{object.name}}</h1>
+        <div class="row description">
+            {{object.get_full_desc}}
+        </div>
         {% for item in object.get_items %}
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">

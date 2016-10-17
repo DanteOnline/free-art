@@ -55,3 +55,8 @@
 .img_desc {
     text-align: center;
 }
+
+.description {
+    margin-left: 0px;
+    margin-bottom: 10px;
+}

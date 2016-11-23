@@ -1,11 +1,18 @@
 {% extends "main.html" %}
 {% load staticfiles %}
 {% load i18n %}
+{% block title %}
+    {%trans "team_h1_our_team" %}
+{% endblock %}
+{% block description %}
+    {%trans "team_h1_our_team" %}
+{% endblock %}
 {% block main %}
     <ol class="breadcrumb">
-        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
-        <li class="active">{% trans "Our team" %}</li>
+        <li><a href="{% url "index" %}">{% trans "breadcrumb_mainpage" %}</a> </li>
+        <li class="active">{% trans "breadcrumb_our_team" %}</li>
     </ol>
+    <h1>{%trans "team_h1_our_team" %}</h1>
     {% for d in developers %}
         <div class="col-md-4">
             <img src="{{d.photo.url}}" class="img-responsive img-circle" alt="{{d.name}}">
@@ -17,8 +24,8 @@
         <div class="col-md-4">
             <img src="{{d.photo.url}}" class="img-responsive img-circle" alt="{{d.name}}">
             <h4>{{d.name}}</h4>
-            <p><a href="{{d.ref_ur}}" class="btn btn-primary">{% trans "Bacame referal" %}</a>
-            <a href="{{d.portfolio_url}}" class="btn btn-info">{% trans "Portfolio" %}</a></p>
+            <p><a href="{{d.ref_ur}}" class="btn btn-primary">{% trans "team_btn_bacame_referal" %}</a>
+            <a href="{{d.portfolio_url}}" class="btn btn-info">{% trans "team_btn_see_portfolio" %}</a></p>
         </div>
     {% endfor %}
 {% endblock %}

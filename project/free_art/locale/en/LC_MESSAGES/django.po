@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-19 16:48+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: about/templates/about.html:4 about/templates/about.html:14
+msgid "about_h1_about"
+msgstr ""
+
+#: about/templates/about.html:7 about/templates/about.html:15
+msgid "about_text"
+msgstr ""
+
+#: about/templates/about.html:11 contact/templates/contact.html:12
+#: faq/templates/faq.html:11 how_to_use/templates/how_to_use.html:11
+#: item/templates/category.html:14 item/templates/item.html:16
+#: team/templates/team.html:12
+msgid "breadcrumb_mainpage"
+msgstr ""
+
+#: about/templates/about.html:12
+msgid "breadcrumb_about"
+msgstr ""
+
+#: contact/templates/contact.html:5 contact/templates/contact.html:8
+#: contact/templates/contact.html:15
+msgid "contact_h1_contact_as"
+msgstr ""
+
+#: contact/templates/contact.html:13
+msgid "breadcrumb_contacts"
+msgstr ""
+
+#: contact/templates/contact.html:20
+msgid "contact_btn_send_message"
+msgstr ""
+
+#: contact/templates/contact.html:41
+msgid "error_enter_subject"
+msgstr ""
+
+#: contact/templates/contact.html:42 contact/templates/contact.html:44
+#: item/templates/item.html:161
+msgid "error_40_max_simbols"
+msgstr ""
+
+#: contact/templates/contact.html:43 item/templates/item.html:160
+msgid "error_enter_your_name"
+msgstr ""
+
+#: contact/templates/contact.html:45 item/templates/item.html:162
+msgid "error_enter_your_email"
+msgstr ""
+
+#: contact/templates/contact.html:46 item/templates/item.html:163
+msgid "error_wrong_email_number"
+msgstr ""
+
+#: contact/templates/contact.html:47
+msgid "error_enter_message"
+msgstr ""
+
+#: contact/templates/message_error.html:2
+msgid "Message error"
+msgstr ""
+
+#: contact/templates/message_good.html:2
+msgid "Message good"
+msgstr ""
+
+#: faq/templates/faq.html:12
+msgid "breadcrumb_faq"
+msgstr ""
+
+#: how_to_use/templates/how_to_use.html:4
+#: how_to_use/templates/how_to_use.html:7
+#: how_to_use/templates/how_to_use.html:14
+msgid "howtouse_h1_install_and_use"
+msgstr ""
+
+#: how_to_use/templates/how_to_use.html:12
+msgid "breadcrumb_install_and_use"
+msgstr ""
+
+#: item/templates/category.html:31 item/templates/category.html:54
+#: item/templates/item.html:26
+msgid "script_before"
+msgstr ""
+
+#: item/templates/category.html:35 item/templates/category.html:58
+#: item/templates/item.html:30
+msgid "script_after"
+msgstr ""
+
+#: item/templates/category.html:48
+msgid "script_example"
+msgstr ""
+
+#: item/templates/category.html:66
+msgid "modal_btn_close"
+msgstr ""
+
+#: item/templates/category.html:74 item/templates/item.html:43
+msgid "script_portfolio_example"
+msgstr ""
+
+#: item/templates/category.html:75
+msgid "script_read_more"
+msgstr ""
+
+#: item/templates/category.html:81 item/templates/item.html:41
+msgid "script_reviews"
+msgstr ""
+
+#: item/templates/category.html:83
+msgid "script_btn_download_free"
+msgstr ""
+
+#: item/templates/item.html:35
+msgid "script_btn_DOWNLOAD_FREE"
+msgstr ""
+
+#: item/templates/item.html:53
+msgid "item_params"
+msgstr ""
+
+#: item/templates/item.html:60
+msgid "item_param_name"
+msgstr ""
+
+#: item/templates/item.html:61
+msgid "item_param_description"
+msgstr ""
+
+#: item/templates/item.html:62
+msgid "item_param_default_value"
+msgstr ""
+
+#: item/templates/item.html:81
+msgid "item_how_to_use"
+msgstr ""
+
+#: item/templates/item.html:95 item/templates/item.html:117
+msgid "script_btn_leave_a_review"
+msgstr ""
+
+#: item/templates/item.html:106
+msgid "script_h4_leave_a_review"
+msgstr ""
+
+#: item/templates/item.html:118
+msgid "modal_btn_cancel"
+msgstr ""
+
+#: item/templates/item.html:133
+msgid "script_no_reviews"
+msgstr ""
+
+#: item/templates/item.html:164
+msgid "error_enter_your_comment"
+msgstr ""
+
+#: main/templates/index.html:4 main/templates/index.html:11
+msgid "main_h1_caption"
+msgstr ""
+
+#: main/templates/index.html:7 main/templates/index.html:12
+msgid "main_text"
+msgstr ""
+
+#: main/templates/index.html:13
+msgid "main_btn_download_scripts"
+msgstr ""
+
+#: main/templates/index.html:20
+msgid "main_h3_how_install_and_use"
+msgstr ""
+
+#: main/templates/index.html:21
+msgid "main_text_use"
+msgstr ""
+
+#: main/templates/index.html:23
+msgid "main_btn_install_and_use"
+msgstr ""
+
+#: main/templates/index.html:31
+msgid "main_h3_our_project"
+msgstr ""
+
+#: main/templates/index.html:32
+msgid "main_text_about"
+msgstr ""
+
+#: main/templates/index.html:34
+msgid "main_btn_about"
+msgstr ""
+
+#: main/templates/index.html:42
+msgid "main_h3_contact_as"
+msgstr ""
+
+#: main/templates/index.html:43
+msgid "main_text_contact"
+msgstr ""
+
+#: main/templates/index.html:45
+msgid "main_btn_contacts"
+msgstr ""
+
+#: main/templates/index.html:53
+msgid "main_h3_our_team"
+msgstr ""
+
+#: main/templates/index.html:54
+msgid "main_text_team"
+msgstr ""
+
+#: main/templates/index.html:56
+msgid "main_btn_our_team"
+msgstr ""
+
+#: team/templates/team.html:5 team/templates/team.html:8
+#: team/templates/team.html:15
+msgid "team_h1_our_team"
+msgstr ""
+
+#: team/templates/team.html:13
+msgid "breadcrumb_our_team"
+msgstr ""
+
+#: team/templates/team.html:27
+msgid "team_btn_bacame_referal"
+msgstr ""
+
+#: team/templates/team.html:28
+msgid "team_btn_see_portfolio"
+msgstr ""
+
+#: templates/main.html:21
+msgid "menu_scripts"
+msgstr ""
+
+#: templates/main.html:24
+msgid "menu_contacts"
+msgstr ""
+
+#: templates/main.html:27
+msgid "menu_install_and_use"
+msgstr ""
+
+#: templates/main.html:30
+msgid "menu_about"
+msgstr ""
+
+#: templates/main.html:36
+msgid "menu_our_team"
+msgstr ""
+
+#: templates/main.html:39
+msgid "menu_language"
+msgstr ""
+
+#: templates/scripts.html:5
+msgid "Shop name"
+msgstr ""

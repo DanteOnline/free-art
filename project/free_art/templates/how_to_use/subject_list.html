@@ -1,9 +1,0 @@
-{% extends "main.html" %}
-{% load i18n %}
-{% block main %}
-    <ol class="breadcrumb">
-        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
-        <li class="active">{% trans "install and use" %}</li>
-    </ol>
-    {% include "how2use.html" %}
-{% endblock %}

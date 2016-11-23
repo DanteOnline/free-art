@@ -1,6 +1,6 @@
-from how_to_use.views import How2UseListView
 from django.conf.urls import url
+from how_to_use.views import HowToUseView
 
 urlpatterns = [
-    url('^$',How2UseListView.as_view(),name='how2use')
+    url(r'^$',HowToUseView.as_view(),name = 'how_to_use')
 ]

@@ -8,9 +8,10 @@
 {% endblock %}
 {% block main %}
     <ol class="breadcrumb">
-        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
-        <li class="active">{% trans "faq" %}</li>
+        <li><a href="{% url "index" %}">{% trans "breadcrumb_mainpage" %}</a> </li>
+        <li class="active">{% trans "breadcrumb_faq" %}</li>
     </ol>
+    <h1>FAQ</h1>
     <div class="col-lg-12">
         <div class="panel-group" id="accordion">
             {% for object in object_list %}

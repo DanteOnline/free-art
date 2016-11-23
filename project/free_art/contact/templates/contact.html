@@ -1,17 +1,23 @@
 {% extends "main.html" %}
 {% load i18n %}
 {% load staticfiles %}
+{% block title %}
+    {% trans "contact_h1_contact_as" %}
+{% endblock %}
+{% block description %}
+    {% trans "contact_h1_contact_as" %}
+{% endblock %}
 {% block main %}
     <ol class="breadcrumb">
-        <li><a href="{% url "index" %}">{% trans "mainpage" %}</a></li>
-        <li class="active">{% trans "contacts" %}</li>
+        <li><a href="{% url "index" %}">{% trans "breadcrumb_mainpage" %}</a></li>
+        <li class="active">{% trans "breadcrumb_contacts" %}</li>
     </ol>
-    <h1>{% trans "Contact as" %}</h1>
+    <h1>{% trans "contact_h1_contact_as" %}</h1>
     <form action="" id="contact_form" method="post">
         {{form.as_ul}}
         {% csrf_token %}
         <hr>
-        <input type="submit" class="btn btn-primary" value="{% trans "Send message" %}">
+        <input type="submit" class="btn btn-primary" value="{% trans "contact_btn_send_message" %}">
     </form>
     <div id="result"></div>
 {% endblock %}
@@ -32,13 +38,13 @@
 			},
 			//Текста предупреждений
 			messages:{
-			    "subject":{ required:"<br/><span style='color:red;'>{% trans "Enter Subject" %}</a>",
-                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
-				"name":{ required:"<br/><span style='color:red;'>{% trans "Enter your name" %}</a>",
-                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
-				"email":{ required:"<br/><span style='color:red;'>{% trans "Enter your email" %}</a>",
-				email: "<br/><span style='color:red;'>{% trans "Wrong email number" %}</a>"},
-				"message":{required:"<br/><span style='color:red;'>{% trans "Enter message" %}</a>"}
+			    "subject":{ required:"<br/><span style='color:red;'>{% trans "error_enter_subject" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "error_40_max_simbols" %}</a>" },
+				"name":{ required:"<br/><span style='color:red;'>{% trans "error_enter_your_name" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "error_40_max_simbols" %}</a>" },
+				"email":{ required:"<br/><span style='color:red;'>{% trans "error_enter_your_email" %}</a>",
+				email: "<br/><span style='color:red;'>{% trans "error_wrong_email_number" %}</a>"},
+				"message":{required:"<br/><span style='color:red;'>{% trans "error_enter_message" %}</a>"}
 			},
 			//Обработчик и отправка данных
 			submitHandler: function(form){

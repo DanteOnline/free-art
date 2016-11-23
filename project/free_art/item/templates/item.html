@@ -13,7 +13,7 @@
 {% endblock %}
 {% block scripts %}
 <ol class="breadcrumb">
-    <li><a href="{% url "index" %}">{% trans "mainpage" %}</a> </li>
+    <li><a href="{% url "index" %}">{% trans "breadcrumb_mainpage" %}</a> </li>
     {% if object.category.has_parent %}
         <li><a href="{{object.category.parent.get_url}}">{{object.category.parent.name}}</a> </li>
     {% endif %}
@@ -23,24 +23,24 @@
 <div class="thumbnail">
     <div class="he-picts450">
         <div class="left_img">
-            <div class="img_desc">{% trans "Before" %}</div>
+            <div class="img_desc">{% trans "script_before" %}</div>
             <img class="img-responsive" src="{{object.start.url}}" alt="object.name">
         </div>
         <div class="right_img">
-            <div class="img_desc">{% trans "After" %}</div>
+            <div class="img_desc">{% trans "script_after" %}</div>
             <img class="img-responsive" src="{{object.end.url}}" alt="object.name">
         </div>
     </div>
     <div class="caption-full">
-        <h4 class="pull-right"><a class="btn btn-primary" href="{{object.load_file.url}}">{% trans "DOWNLOAD FREE" %}</a></h4>
+        <h4 class="pull-right"><a class="btn btn-primary" href="{{object.load_file.url}}">{% trans "script_btn_DOWNLOAD_FREE" %}</a></h4>
         <h1>{{object.name}}
         </h1>
         <p>{{object.get_full_desc}}</p>
     </div>
     <div class="ratings">
-        <p class="pull-right">{{object.comment_count}} {% trans "reviews" %}</p>
+        <p class="pull-right">{{object.comment_count}} {% trans "script_reviews" %}</p>
         <p>
-            <a href="{{object.shutter_url}}">{% trans "see example in shuttrstock-portfolio " %}</a>
+            <a href="{{object.shutter_url}}">{% trans "script_portfolio_example" %}</a>
         </p>
     </div>
 </div>
@@ -92,7 +92,7 @@
 
 <div class="well">
     <div class="text-right">
-        <a class="btn btn-success" data-toggle="modal" data-target="#myModal">{% trans "Leave a Review" %}</a>
+        <a class="btn btn-success" data-toggle="modal" data-target="#myModal">{% trans "script_btn_leave_a_review" %}</a>
     </div>
 
     <!-- Modal -->
@@ -103,7 +103,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">{% trans "Leave a Review" %}</h4>
+            <h4 class="modal-title">{% trans "script_h4_leave_a_review" %}</h4>
           </div>
           <div class="modal-body">
             <p>
@@ -114,8 +114,8 @@
                         <input type="hidden" name="next" value="{{object.get_url}}">
                         <div id="result" style="margin-bottom: 20px"></div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">{% trans "Leave a Review" %}</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Cancel" %}</button>
+                            <button type="submit" class="btn btn-primary">{% trans "script_btn_leave_a_review" %}</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "modal_btn_cancel" %}</button>
                          </div>
                     </form>
                 </div>
@@ -130,7 +130,7 @@
     {% if object.comment_count == 0 %}
         <div class="row">
             <div class="col-md-12">
-                <p>{% trans "No reviews. You will be first" %}</p>
+                <p>{% trans "script_no_reviews" %}</p>
             </div>
         </div>
     {% else %}
@@ -157,11 +157,11 @@
 			},
 			//Текста предупреждений
 			messages:{
-				"name":{ required:"<br/><span style='color:red;'>{% trans "Enter your name" %}</a>",
-                maxlength: "<br/><span style='color:red;'>{% trans "40 max simbols" %}</a>" },
-				"email":{ required:"<br/><span style='color:red;'>{% trans "Enter your email" %}</a>",
-				email: "<br/><span style='color:red;'>{% trans "Wrong email number" %}</a>"},
-				"comment":{required:"<br/><span style='color:red;'>{% trans "Enter your comment" %}</a>"}
+				"name":{ required:"<br/><span style='color:red;'>{% trans "error_enter_your_name" %}</a>",
+                maxlength: "<br/><span style='color:red;'>{% trans "error_40_max_simbols" %}</a>" },
+				"email":{ required:"<br/><span style='color:red;'>{% trans "error_enter_your_email" %}</a>",
+				email: "<br/><span style='color:red;'>{% trans "error_wrong_email_number" %}</a>"},
+				"comment":{required:"<br/><span style='color:red;'>{% trans "error_enter_your_comment" %}</a>"}
 			},
 		})
 	});

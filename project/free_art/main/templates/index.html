@@ -1,20 +1,26 @@
 {% extends "main.html" %}
 {% load i18n %}
+{% block title %}
+    {% trans "main_h1_caption" %}
+{% endblock %}
+{% block description %}
+    {% trans "main_text" %}
+{% endblock %}
 {% block main %}
     <header class="jumbotron">
-        <h1>{% trans "Free Adobe Illustrator scripts" %}</h1>
+        <h1>{% trans "main_h1_caption" %}</h1>
         <p>{% trans "main_text" %}</p>
-        <a href="{% url "category" pk=1 %}" class="btn btn-primary">{% trans "Download scripts" %}</a>
+        <a href="{% url "category" pk=1 %}" class="btn btn-primary">{% trans "main_btn_download_scripts" %}</a>
     </header>
     <hr>
     <div class="row text-center">
         <div class="col-md-6">
             <div class="thumbnail">
                 <div >
-                    <h3>{% trans "How install and use" %}</h3>
-                    <p>{% trans "text_use" %}</p>
+                    <h3>{% trans "main_h3_how_install_and_use" %}</h3>
+                    <p>{% trans "main_text_use" %}</p>
                     <p>
-                        <a href="{% url "how2use" %}" class="btn btn-primary">{% trans "Install and Use" %}</a>
+                        <a href="{% url "how_to_use" %}" class="btn btn-primary">{% trans "main_btn_install_and_use" %}</a>
                     </p>
                 </div>
             </div>
@@ -22,10 +28,10 @@
         <div class="col-md-6">
             <div class="thumbnail">
                 <div >
-                    <h3>{% trans "Our project" %}</h3>
-                    <p>{% trans "text_about" %}</p>
+                    <h3>{% trans "main_h3_our_project" %}</h3>
+                    <p>{% trans "main_text_about" %}</p>
                     <p>
-                        <a href="{% url "about" %}" class="btn btn-primary">{% trans "About" %}</a>
+                        <a href="{% url "about" %}" class="btn btn-primary">{% trans "main_btn_about" %}</a>
                     </p>
                 </div>
             </div>
@@ -33,10 +39,10 @@
         <div class="col-md-6">
             <div class="thumbnail">
                 <div >
-                    <h3>{% trans "Contact as" %}</h3>
-                    <p>{% trans "text_contact" %}</p>
+                    <h3>{% trans "main_h3_contact_as" %}</h3>
+                    <p>{% trans "main_text_contact" %}</p>
                     <p>
-                        <a href="{% url "contact" %}" class="btn btn-primary">{% trans "Contacts" %}</a>
+                        <a href="{% url "contact" %}" class="btn btn-primary">{% trans "main_btn_contacts" %}</a>
                     </p>
                 </div>
             </div>
@@ -44,10 +50,10 @@
         <div class="col-md-6">
             <div class="thumbnail">
                 <div >
-                    <h3>{% trans "Our team" %}</h3>
-                    <p>{% trans "text_team" %}</p>
+                    <h3>{% trans "main_h3_our_team" %}</h3>
+                    <p>{% trans "main_text_team" %}</p>
                     <p>
-                        <a href="{% url "team" %}" class="btn btn-primary">{% trans "Our team" %}</a>
+                        <a href="{% url "team" %}" class="btn btn-primary">{% trans "main_btn_our_team" %}</a>
                     </p>
                 </div>
             </div>

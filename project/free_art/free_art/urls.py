@@ -28,5 +28,5 @@ urlpatterns = i18n_patterns(
     url(r'team/', include('team.urls')),
     url(r'about/', include('about.urls')),
     url(r'contact', include('contact.urls')),
-    url(r'h2use', include('how_to_use.urls'))
+    url(r'how_to_use', include('how_to_use.urls')),
 ) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

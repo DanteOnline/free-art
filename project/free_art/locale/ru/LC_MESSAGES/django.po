@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-19 16:47+0300\n"
+"PO-Revision-Date: 2016-11-19 17:55+0300\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n"
+"%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: about/templates/about.html:4 about/templates/about.html:14
+msgid "about_h1_about"
+msgstr "О проекте"
+
+#: about/templates/about.html:7 about/templates/about.html:15
+msgid "about_text"
+msgstr "Сделать этот текст в базе с bbcode"
+
+#: about/templates/about.html:11 contact/templates/contact.html:12 faq/templates/faq.html:11
+#: how_to_use/templates/how_to_use.html:11 item/templates/category.html:14 item/templates/item.html:16
+#: team/templates/team.html:12
+msgid "breadcrumb_mainpage"
+msgstr "Главная"
+
+#: about/templates/about.html:12
+msgid "breadcrumb_about"
+msgstr "О проекте"
+
+#: contact/templates/contact.html:5 contact/templates/contact.html:8 contact/templates/contact.html:15
+msgid "contact_h1_contact_as"
+msgstr "Для связи с нами заполните форму ниже"
+
+#: contact/templates/contact.html:13
+msgid "breadcrumb_contacts"
+msgstr "Контакты"
+
+#: contact/templates/contact.html:20
+msgid "contact_btn_send_message"
+msgstr "Отправить сообщение"
+
+#: contact/templates/contact.html:41
+msgid "error_enter_subject"
+msgstr "Введит тему сообщения"
+
+#: contact/templates/contact.html:42 contact/templates/contact.html:44 item/templates/item.html:161
+msgid "error_40_max_simbols"
+msgstr "Текст должен быть не больше 40 символов"
+
+#: contact/templates/contact.html:43 item/templates/item.html:160
+msgid "error_enter_your_name"
+msgstr "Введите ваше имя"
+
+#: contact/templates/contact.html:45 item/templates/item.html:162
+msgid "error_enter_your_email"
+msgstr "Введите ваш email"
+
+#: contact/templates/contact.html:46 item/templates/item.html:163
+msgid "error_wrong_email_number"
+msgstr "Неверный email адрес"
+
+#: contact/templates/contact.html:47
+msgid "error_enter_message"
+msgstr "Введите текст сообщения"
+
+#: contact/templates/message_error.html:2
+msgid "Message error"
+msgstr ""
+
+#: contact/templates/message_good.html:2
+msgid "Message good"
+msgstr ""
+
+#: faq/templates/faq.html:12
+msgid "breadcrumb_faq"
+msgstr "FAQ"
+
+#: how_to_use/templates/how_to_use.html:4 how_to_use/templates/how_to_use.html:7
+#: how_to_use/templates/how_to_use.html:14
+msgid "howtouse_h1_install_and_use"
+msgstr "Как скачать бесплатно, установить и использовать скрипты"
+
+#: how_to_use/templates/how_to_use.html:12
+msgid "breadcrumb_install_and_use"
+msgstr "Установка и использование"
+
+#: item/templates/category.html:31 item/templates/category.html:54 item/templates/item.html:26
+msgid "script_before"
+msgstr "до"
+
+#: item/templates/category.html:35 item/templates/category.html:58 item/templates/item.html:30
+msgid "script_after"
+msgstr "после"
+
+#: item/templates/category.html:48
+msgid "script_example"
+msgstr "Пример работы скрипта"
+
+#: item/templates/category.html:66
+msgid "modal_btn_close"
+msgstr "Закрыть"
+
+#: item/templates/category.html:74 item/templates/item.html:43
+msgid "script_portfolio_example"
+msgstr "пример в портфолио"
+
+#: item/templates/category.html:75
+msgid "script_read_more"
+msgstr "подробнее..."
+
+#: item/templates/category.html:81 item/templates/item.html:41
+msgid "script_reviews"
+msgstr "количество отзывов"
+
+#: item/templates/category.html:83
+msgid "script_btn_download_free"
+msgstr "скачать бесплатно"
+
+#: item/templates/item.html:35
+msgid "script_btn_DOWNLOAD_FREE"
+msgstr "СКАЧАТЬ БЕСПЛАТНО"
+
+#: item/templates/item.html:53
+msgid "item_params"
+msgstr "Параметры"
+
+#: item/templates/item.html:60
+msgid "item_param_name"
+msgstr "Название"
+
+#: item/templates/item.html:61
+msgid "item_param_description"
+msgstr "Описание"
+
+#: item/templates/item.html:62
+msgid "item_param_default_value"
+msgstr "Значение по умолчанию"
+
+#: item/templates/item.html:81
+msgid "item_how_to_use"
+msgstr "Как использовать"
+
+#: item/templates/item.html:95 item/templates/item.html:117
+msgid "script_btn_leave_a_review"
+msgstr "Оставить отзыв"
+
+#: item/templates/item.html:106
+msgid "script_h4_leave_a_review"
+msgstr "Оставить отзыв"
+
+#: item/templates/item.html:118
+msgid "modal_btn_cancel"
+msgstr "Отмена"
+
+#: item/templates/item.html:133
+msgid "script_no_reviews"
+msgstr "Еще никто не оставил свой отзыв. Вы будете первым"
+
+#: item/templates/item.html:164
+msgid "error_enter_your_comment"
+msgstr "Введите текст отзыва"
+
+#: main/templates/index.html:4 main/templates/index.html:11
+msgid "main_h1_caption"
+msgstr "Бесплатные скрипты для иллюстратора от Dante"
+
+#: main/templates/index.html:7 main/templates/index.html:12
+msgid "main_text"
+msgstr "На нашем сайте вы найдете полезные скрипты для иллюстратора. Их все можно скачать бесплатно."
+
+#: main/templates/index.html:13
+msgid "main_btn_download_scripts"
+msgstr "Скачать скрипты бесплатно"
+
+#: main/templates/index.html:20
+msgid "main_h3_how_install_and_use"
+msgstr "Как установить и пользоваться?"
+
+#: main/templates/index.html:21
+msgid "main_text_use"
+msgstr "Посмотрите текстовую и видеоинструкции как бесплатно скачать, установить и пользоваться скриптами"
+
+#: main/templates/index.html:23
+msgid "main_btn_install_and_use"
+msgstr "Установка и использование"
+
+#: main/templates/index.html:31
+msgid "main_h3_our_project"
+msgstr "О проекте"
+
+#: main/templates/index.html:32
+msgid "main_text_about"
+msgstr "Узнайте больше о нашем проекте"
+
+#: main/templates/index.html:34
+msgid "main_btn_about"
+msgstr "О проекте"
+
+#: main/templates/index.html:42
+msgid "main_h3_contact_as"
+msgstr "Как с нами связаться?"
+
+#: main/templates/index.html:43
+msgid "main_text_contact"
+msgstr "Отправляйте нам свои отзывы и предложения на странице контакты"
+
+#: main/templates/index.html:45
+msgid "main_btn_contacts"
+msgstr "Контакты"
+
+#: main/templates/index.html:53
+msgid "main_h3_our_team"
+msgstr "Наша команда"
+
+#: main/templates/index.html:54
+msgid "main_text_team"
+msgstr "Узнайте больше о команде нашего проекта или станьте её частью"
+
+#: main/templates/index.html:56
+msgid "main_btn_our_team"
+msgstr "Наша команда"
+
+#: team/templates/team.html:5 team/templates/team.html:8 team/templates/team.html:15
+msgid "team_h1_our_team"
+msgstr "Наша команда"
+
+#: team/templates/team.html:13
+msgid "breadcrumb_our_team"
+msgstr "Наша команда"
+
+#: team/templates/team.html:27
+msgid "team_btn_bacame_referal"
+msgstr "Стать рефералом"
+
+#: team/templates/team.html:28
+msgid "team_btn_see_portfolio"
+msgstr "Смотреть портфолио"
+
+#: templates/main.html:21
+msgid "menu_scripts"
+msgstr "Скрипты"
+
+#: templates/main.html:24
+msgid "menu_contacts"
+msgstr "Контакты"
+
+#: templates/main.html:27
+msgid "menu_install_and_use"
+msgstr "Установка и использование"
+
+#: templates/main.html:30
+msgid "menu_about"
+msgstr "О проекте"
+
+#: templates/main.html:36
+msgid "menu_our_team"
+msgstr "Наша команда"
+
+#: templates/main.html:39
+msgid "menu_language"
+msgstr "Язык"
+
+#: templates/scripts.html:5
+msgid "Shop name"
+msgstr ""

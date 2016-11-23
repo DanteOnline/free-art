@@ -1,16 +1,15 @@
 {% extends "main.html" %}
 {% load i18n %}
 {% block title %}
-    {% trans "about_h1_about" %}
+{% trans "howtouse_h1_install_and_use" %}
 {% endblock %}
 {% block description %}
-    {% trans "about_text" %}
+{% trans "howtouse_h1_install_and_use" %}
 {% endblock %}
 {% block main %}
     <ol class="breadcrumb">
         <li><a href="{% url "index" %}">{% trans "breadcrumb_mainpage" %}</a></li>
-        <li class="active">{% trans "breadcrumb_about" %}</li>
+        <li class="active">{% trans "breadcrumb_install_and_use" %}</li>
     </ol>
-    <h1>{% trans "about_h1_about" %}</h1>
-    {% trans "about_text" %}
+    <h1>{% trans "howtouse_h1_install_and_use" %}</h1>
 {% endblock %}

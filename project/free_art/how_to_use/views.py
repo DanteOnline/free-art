@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.views.generic.list import ListView
-from how_to_use.models import Subject
+from django.views.generic.base import TemplateView
 
-class How2UseListView(ListView):
-    model = Subject
-
+# Create your views here.
+class HowToUseView(TemplateView):
+    template_name = 'how_to_use.html'

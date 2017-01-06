@@ -19,60 +19,60 @@ msgstr ""
 
 #: about/templates/about.html:4 about/templates/about.html:14
 msgid "about_h1_about"
-msgstr ""
+msgstr "About the project"
 
 #: about/templates/about.html:7 about/templates/about.html:15
 msgid "about_text"
-msgstr ""
+msgstr "Make the text in the database with bbcode"
 
 #: about/templates/about.html:11 contact/templates/contact.html:12
 #: faq/templates/faq.html:11 how_to_use/templates/how_to_use.html:11
 #: item/templates/category.html:14 item/templates/item.html:16
 #: team/templates/team.html:12
 msgid "breadcrumb_mainpage"
-msgstr ""
+msgstr "Home"
 
 #: about/templates/about.html:12
 msgid "breadcrumb_about"
-msgstr ""
+msgstr "About"
 
 #: contact/templates/contact.html:5 contact/templates/contact.html:8
 #: contact/templates/contact.html:15
 msgid "contact_h1_contact_as"
-msgstr ""
+msgstr "To contact us please fill out the form below"
 
 #: contact/templates/contact.html:13
 msgid "breadcrumb_contacts"
-msgstr ""
+msgstr "Contacts"
 
 #: contact/templates/contact.html:20
 msgid "contact_btn_send_message"
-msgstr ""
+msgstr "Send a message"
 
 #: contact/templates/contact.html:41
 msgid "error_enter_subject"
-msgstr ""
+msgstr "Enter the email subject"
 
 #: contact/templates/contact.html:42 contact/templates/contact.html:44
 #: item/templates/item.html:161
 msgid "error_40_max_simbols"
-msgstr ""
+msgstr "The text should be no more than 40 characters"
 
 #: contact/templates/contact.html:43 item/templates/item.html:160
 msgid "error_enter_your_name"
-msgstr ""
+msgstr "Enter your name"
 
 #: contact/templates/contact.html:45 item/templates/item.html:162
 msgid "error_enter_your_email"
-msgstr ""
+msgstr "Enter your email"
 
 #: contact/templates/contact.html:46 item/templates/item.html:163
 msgid "error_wrong_email_number"
-msgstr ""
+msgstr "Invalid email address"
 
 #: contact/templates/contact.html:47
 msgid "error_enter_message"
-msgstr ""
+msgstr "Enter your message"
 
 #: contact/templates/message_error.html:2
 msgid "Message error"
@@ -84,196 +84,199 @@ msgstr ""
 
 #: faq/templates/faq.html:12
 msgid "breadcrumb_faq"
-msgstr ""
+msgstr "FAQ"
 
 #: how_to_use/templates/how_to_use.html:4
 #: how_to_use/templates/how_to_use.html:7
 #: how_to_use/templates/how_to_use.html:14
 msgid "howtouse_h1_install_and_use"
-msgstr ""
+msgstr "How to download, install and use scripts"
 
 #: how_to_use/templates/how_to_use.html:12
 msgid "breadcrumb_install_and_use"
-msgstr ""
+msgstr "Installation and Use"
 
 #: item/templates/category.html:31 item/templates/category.html:54
 #: item/templates/item.html:26
 msgid "script_before"
-msgstr ""
+msgstr "before"
 
 #: item/templates/category.html:35 item/templates/category.html:58
 #: item/templates/item.html:30
 msgid "script_after"
-msgstr ""
+msgstr "after"
 
 #: item/templates/category.html:48
 msgid "script_example"
-msgstr ""
+msgstr "An example of the script"
 
 #: item/templates/category.html:66
 msgid "modal_btn_close"
-msgstr ""
+msgstr "Close"
 
 #: item/templates/category.html:74 item/templates/item.html:43
 msgid "script_portfolio_example"
-msgstr ""
+msgstr "Example Portfolio"
 
 #: item/templates/category.html:75
 msgid "script_read_more"
-msgstr ""
+msgstr "more..."
 
 #: item/templates/category.html:81 item/templates/item.html:41
 msgid "script_reviews"
-msgstr ""
+msgstr "number of reviews"
 
 #: item/templates/category.html:83
 msgid "script_btn_download_free"
-msgstr ""
+msgstr "download free"
 
 #: item/templates/item.html:35
 msgid "script_btn_DOWNLOAD_FREE"
-msgstr ""
+msgstr "DOWNLOAD FREE"
 
 #: item/templates/item.html:53
 msgid "item_params"
-msgstr ""
+msgstr "Options"
 
 #: item/templates/item.html:60
 msgid "item_param_name"
-msgstr ""
+msgstr "Name"
 
 #: item/templates/item.html:61
 msgid "item_param_description"
-msgstr ""
+msgstr "Description"
 
 #: item/templates/item.html:62
 msgid "item_param_default_value"
-msgstr ""
+msgstr "Default value"
 
 #: item/templates/item.html:81
 msgid "item_how_to_use"
-msgstr ""
+msgstr "How to use"
 
 #: item/templates/item.html:95 item/templates/item.html:117
 msgid "script_btn_leave_a_review"
-msgstr ""
+msgstr "Leave a review"
 
 #: item/templates/item.html:106
 msgid "script_h4_leave_a_review"
-msgstr ""
+msgstr "Leave a review"
 
 #: item/templates/item.html:118
 msgid "modal_btn_cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: item/templates/item.html:133
 msgid "script_no_reviews"
-msgstr ""
+msgstr "No one has left a review. You'll be the first"
 
 #: item/templates/item.html:164
 msgid "error_enter_your_comment"
-msgstr ""
+msgstr "Enter your comment"
 
 #: main/templates/index.html:4 main/templates/index.html:11
 msgid "main_h1_caption"
-msgstr ""
+msgstr "Scripts for Illustrator. Is free."
 
 #: main/templates/index.html:7 main/templates/index.html:12
 msgid "main_text"
 msgstr ""
+"On our site you will find useful scripts for Illustrator. Each of them can be downloaded free of charge."
 
 #: main/templates/index.html:13
 msgid "main_btn_download_scripts"
-msgstr ""
+msgstr "Download free scripts"
 
 #: main/templates/index.html:20
 msgid "main_h3_how_install_and_use"
-msgstr ""
+msgstr "How to install and use?"
 
 #: main/templates/index.html:21
 msgid "main_text_use"
 msgstr ""
+"In order to download, install and use the scripts, you can see the How To Videos"
 
 #: main/templates/index.html:23
 msgid "main_btn_install_and_use"
-msgstr ""
+msgstr "Installation and Use"
 
 #: main/templates/index.html:31
 msgid "main_h3_our_project"
-msgstr ""
+msgstr "About the project"
 
 #: main/templates/index.html:32
 msgid "main_text_about"
 msgstr ""
+"If you often use scripts for Illustrator, you will be interested to learn more about our project"
 
 #: main/templates/index.html:34
 msgid "main_btn_about"
-msgstr ""
+msgstr "About"
 
 #: main/templates/index.html:42
 msgid "main_h3_contact_as"
-msgstr ""
+msgstr "How to contact us?"
 
 #: main/templates/index.html:43
 msgid "main_text_contact"
-msgstr ""
+msgstr "Please send us your feedback and suggestions on the \"Contact Us\" page"
 
 #: main/templates/index.html:45
 msgid "main_btn_contacts"
-msgstr ""
+msgstr "Contacts"
 
 #: main/templates/index.html:53
 msgid "main_h3_our_team"
-msgstr ""
+msgstr "Our team"
 
 #: main/templates/index.html:54
 msgid "main_text_team"
-msgstr ""
+msgstr "You can get acquainted with our team and maybe even become a part of it"
 
 #: main/templates/index.html:56
 msgid "main_btn_our_team"
-msgstr ""
+msgstr "Our team"
 
 #: team/templates/team.html:5 team/templates/team.html:8
 #: team/templates/team.html:15
 msgid "team_h1_our_team"
-msgstr ""
+msgstr "Our team"
 
 #: team/templates/team.html:13
 msgid "breadcrumb_our_team"
-msgstr ""
+msgstr "Our team"
 
 #: team/templates/team.html:27
 msgid "team_btn_bacame_referal"
-msgstr ""
+msgstr "Became referal"
 
 #: team/templates/team.html:28
 msgid "team_btn_see_portfolio"
-msgstr ""
+msgstr "See portfolio"
 
 #: templates/main.html:21
 msgid "menu_scripts"
-msgstr ""
+msgstr "Scripts"
 
 #: templates/main.html:24
 msgid "menu_contacts"
-msgstr ""
+msgstr "Contacts"
 
 #: templates/main.html:27
 msgid "menu_install_and_use"
-msgstr ""
+msgstr "Installation and Use"
 
 #: templates/main.html:30
 msgid "menu_about"
-msgstr ""
+msgstr "About"
 
 #: templates/main.html:36
 msgid "menu_our_team"
-msgstr ""
+msgstr "Our team"
 
 #: templates/main.html:39
 msgid "menu_language"
-msgstr ""
+msgstr "Language"
 
 #: templates/scripts.html:5
 msgid "Shop name"

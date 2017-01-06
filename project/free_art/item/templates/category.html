@@ -78,7 +78,7 @@
                         <p>{{item.short_desc}}</p>
                     </div>
                     <div class="ratings">
-                        <p class="pull-right">{{item.comment_count}} {% trans "script_reviews" %}</p>
+                        <p class="pull-right">{% trans "script_reviews" %}: {{item.comment_count}} </p>
                         <p>
                             <a class="btn btn-primary" href="{{item.load_file.url}}">{% trans "script_btn_download_free" %}</a>
                         </p>

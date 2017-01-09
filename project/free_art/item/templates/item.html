@@ -38,7 +38,7 @@
         <p>{{object.get_full_desc}}</p>
     </div>
     <div class="ratings">
-        <p class="pull-right">{% trans "script_reviews" %}: {{object.comment_count}} </p>
+        <!--<p class="pull-right">{% trans "script_reviews" %}: {{object.comment_count}} </p>-->
         <p>
             <a href="{{object.shutter_url}}">{% trans "script_portfolio_example" %}</a>
         </p>
@@ -90,16 +90,15 @@
     {% endif %}
 </div>
 
+<!--
 <div class="well">
     <div class="text-right">
         <a class="btn btn-success" data-toggle="modal" data-target="#myModal">{% trans "script_btn_leave_a_review" %}</a>
     </div>
 
-    <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
 
-        <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -138,6 +137,7 @@
     {% endif %}
 
 </div>
+-->
 {% endblock %}
 
 

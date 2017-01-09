@@ -154,5 +154,5 @@ MANAGERS = (('dante', 'iamdanteonline@gmail.com'),)
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'iamdanteonline@gmail.com'
-EMAIL_HOST_PASSWORD = 'D4ywtb2ofywed4'
+EMAIL_HOST_PASSWORD = 'PASSWORD'
 DEFAULT_FROM_EMAIL = 'iamdanteonline@gmail.com'
